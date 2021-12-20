@@ -1,0 +1,62 @@
+{%extends 'layout.html'%}
+{%load static%}
+{%block title%}
+<title>Homepage</title>
+{%endblock title%}
+{%block main_content%}
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item ">
+            <img src="{%static 'images/1.jpg'%}" class="d-block w-100" alt="image" height="550px">
+        </div>
+        <div class="carousel-item active">
+            <img src="{%static 'images/1.jpg'%}" class="d-block w-100" alt="...">
+        </div>
+<!--        <div class="carousel-item">-->
+<!--            <img src="{%static 'images/aduit2.png'%}" class="d-block w-100" alt="...">-->
+<!--        </div>-->
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="section1">
+    <div class="container1">
+        <div class="content-section1">
+            <div class="title1">
+                <h1>About Us</h1>
+            </div>
+            <div class="content1">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam iusto ipsum molestias! Facilis
+                    accusamus nulla, praesentium nam quae adipisci voluptatum?
+                    Debitis quos nulla impedit voluptate mollitia nam aliquid praesentium perspiciatis!</p>
+            </div>
+            <div class="button1">
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+
+<div class="services">
+    <h1>Our Services</h1>
+
+
+</div>
+</div>
+
+{%endblock main_content%}
