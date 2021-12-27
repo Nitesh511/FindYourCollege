@@ -1,8 +1,8 @@
 {%load static%}
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-   <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+   <div class="container-lg">
     <a class="navbar-brand" href="#">
-      <img src="{%static 'images/find.png'%}" width="40px" alt="...">
+      <img src="{%static 'images/college.png'%}" width="60px" alt="...">
       Find Your College
     </a>
   </div>
@@ -12,8 +12,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-lg-0">
-        <li class="nav-item">
+      <ul class="navbar-nav ms-auto mb-lg-0 m-1 px-5 ">
+        <li class="nav-item ">
           <a class="nav-link active" aria-current="page" href="/home/homepage">Home</a>
         </li>
         <li class="nav-item">
@@ -22,13 +22,13 @@
         <li class="nav-item">
           <a class="nav-link disabled">Contact Us</a>
         </li>
-         <li class="nav-item">
-                    <a class="nav-link {{activate_login}} bg-success " href="/login"><i class="fas fa-sign-in-alt"></i>Login</a>
-                </li>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{activate_register}} bg-primary" href="/register">Register</a>
-                </li>
+          <div class="login">
+              <a href="/login"><button type="submit" onclick="/login">Login</button></a>
+          </div>
+             <div class="register">
+               <a href="/register"><button type="submit">Register</button></a>
+          </div>
+
       </ul>
     </div>
   </div>
