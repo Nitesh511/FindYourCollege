@@ -1,36 +1,43 @@
 {% extends 'layout.html' %}
 {% load bootstrap %}
+{%load static%}
 {% block title %}
     <title>Add User</title>
 {% endblock%}
 
 {% block main_content %}
 
+
 <div class="container">
 <div class="row">
 
     <div class="col-md-6 offset-md-3">
-        <h1 class="text-center">Add New User</h1>
+        <h1 class="text-center">Register Form</h1>
+        <div class="imagei">
+              <img src="{%static 'images/signup-image.jpg'%}" width="580px">
+            </div>
           {% include 'messages.html'%}
-        <div class="card py-2 px-2">
+        <div class="form1">
+        <div class="card py-3 px-2 w-105 p-4" style="background-color: #eee;"">
         <form class="form myForm" action="" method="POST">
             {% csrf_token %}
             {{ form_register | bootstrap_horizontal }}
             <button type="submit" class="btn btn-primary mt-3">Submit</button>
         </form>
+            </div>
     </div>
     </div>
 </div>
 </div>
 <script>
     var form_fields = document.getElementsByTagName('input')
-    form_fields[2].placeholder = "Enter username"
-    form_fields[3].placeholder = "Enter Email"
-    form_fields[4].placeholder = "Enter password"
-    form_fields[5].placeholder = "Confirm password"
+    form_fields[1].placeholder = "Enter username"
+    form_fields[2].placeholder = "Enter Email"
+    form_fields[3].placeholder = "Enter password"
+    form_fields[4].placeholder = "Confirm password"
 
    for(field in form_fields){
-   form_fields[field].className += ' my-3'
+   form_fields[field].className += ' my-1'
    }
 </script>
 

@@ -1,23 +1,29 @@
 {% extends 'layout.html' %}
 {% load bootstrap %}
+{% load static %}
 {% block title %}
     <title>Login</title>
 {% endblock%}
 
 {% block main_content %}
 
-<div class="container">
+<div class="container22">
+    <div class="imgse1">
+     <img src="{%static 'images/3.png'%}">
+        </div>
 <div class="row">
-
-    <div class="col-md-6 offset-md-3">
-        <h1 class="text-center">Login</h1>
+    <div class="col-md-6 offset-md-3 mt-5">
           {% include 'messages.html'%}
-        <div class="card py-2 px-2">
+        <div class="card py-5 px-4 bg-transparent">
+             <h1 class="text-center">Login</h1>
         <form class="form myForm" action="" method="POST">
             {% csrf_token %}
             {{ form_login | bootstrap_horizontal }}
-            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            <a href="#"> <button type="reset" class="btn btn-danger offset-md-9 mt-3">Forget Password?</button></a>
+            <div class="btn4">
+            <button type="submit" class="btn btn-primary mt-5">SIGN IN</button>
         </form>
+
     </div>
     </div>
 </div>
