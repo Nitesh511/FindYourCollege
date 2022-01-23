@@ -19,7 +19,7 @@
         <form class="form myForm" action="" method="POST">
             {% csrf_token %}
             {{ form_login | bootstrap_horizontal }}
-            <a href="#"> <button type="reset" class="btn btn-danger offset-md-9 mt-3">Forget Password?</button></a>
+           <button type="reset" class="btn btn-danger offset-md-9 mt-3"> <a href="/password_change_user">Forget Password?</button></a>
             <div class="btn4">
             <button type="submit" class="btn btn-primary mt-5">SIGN IN</button>
         </form>

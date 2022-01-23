@@ -14,6 +14,8 @@ def logout_user(request):
     logout(request)
     return redirect('/login')
 
+def back(request):
+    return redirect('/home/seecollege')
 
 
 def login_user(request):
