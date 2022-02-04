@@ -9,9 +9,13 @@
 
 <div class="container22">
     <div class="imgse1">
-     <img src="{%static 'images/3.png'%}">
+     <img src="{%static 'images/college.jpg'%}">
+        <h4>Welcome Back</h4>
+        <p>Let’s face it, college is a big deal. <br>
+            From applications to stepping on campus, College Khabar<br>
+            has your back every step of the way.</p>
         </div>
-<div class="row">
+<div class="row1">
     <div class="col-md-6 offset-md-3 mt-5">
           {% include 'messages.html'%}
         <div class="card py-5 px-4 bg-transparent">
@@ -19,12 +23,13 @@
         <form class="form myForm" action="" method="POST">
             {% csrf_token %}
             {{ form_login | bootstrap_horizontal }}
-           <button type="reset" class="btn btn-danger offset-md-9 mt-3"> <a href="/password_change_user">Forget Password?</button></a>
-            <div class="btn4">
+            <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
             <button type="submit" class="btn btn-primary mt-5">SIGN IN</button>
         </form>
 
     </div>
+             <div class="for"><a href="/password_reset">Forget Password?</a></div>
+            <div class="already"><a href="/register">Don't Have an Account Yet?</a> </div>
     </div>
 </div>
 </div>

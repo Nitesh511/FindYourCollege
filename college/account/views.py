@@ -13,9 +13,9 @@ from django.contrib.auth.decorators import login_required
 def logout_user(request):
     logout(request)
     return redirect('/login')
-
-def back(request):
-    return redirect('/home/seecollege')
+#
+# def back(request):
+#     return redirect('/home/seecollege')
 
 
 def login_user(request):
@@ -57,3 +57,22 @@ def register_user(request):
         'activate_register': 'active'
     }
     return render(request, 'account/register.html', context)
+
+def change_password(request):
+    if request.method == "POST":
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)
+            messages.add_message(request, messages.SUCCESS, 'Password Changed Successfully')
+            if request.user.is_staff:
+                return redirect('/admins')
+            else:
+                return redirect('/resort/home')
+        else:
+            messages.add_message(request, messages.ERROR, 'Please verify the form fields')
+            return render(request, 'accounts/pwchange.html', {'password_change_form': form})
+    context = {
+        'password_change_form': PasswordChangeForm(request.user)
+    }
+    return render(request, 'accounts/pwchange.html', context)
